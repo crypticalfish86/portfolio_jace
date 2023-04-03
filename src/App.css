@@ -6,6 +6,8 @@
 #Content
 {
  display: flex;
+ justify-content: center;
+ 
 }
 #Website_Header
 {
