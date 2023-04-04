@@ -1,31 +1,36 @@
 .App {
   text-align: center;
-  color: #DADCDB;
-  background-color: #252324;  
-}
-#Content
-{
- display: flex;
- justify-content: center;
- 
+  color: #FCFAF1;  
 }
 #Website_Header
 {
-  
+  color: #222831;
+  background-color: #E6B31E;
 }
-#About
+#Content
 {
   border: solid white 0.1rem;
 }
-#Projects
+.Content_Child
 {
   border: solid white 0.1rem;
 }
-#Single_Project_Card
+.Single_Project_Card
 {
-  border: solid white 0.1rem;
+  border: solid #E6B31E 0.1rem;
+  width: 40rem;
+  margin: auto;
+}
+#Single_Project_Header
+{
+  background-color: #E6B31E;
+  color: #222831;
+}
+.Single_Project_Image
+{
+  height: 6rem;
 }
 #Footer
 {
-
+  border: solid white 0.1rem;
 }
