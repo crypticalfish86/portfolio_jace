@@ -6,6 +6,7 @@
 {
   color: #222831;
   background-color: #E6B31E;
+  margin-top: 0;
 }
 #Content
 {
@@ -20,15 +21,46 @@
   border: solid #E6B31E 0.1rem;
   width: 40rem;
   margin: auto;
+  margin-bottom: 1rem;
 }
 #Single_Project_Header
 {
   background-color: #E6B31E;
   color: #222831;
+  margin-top: 0rem;
+  text-align: left;
+  padding-left: 1rem;
+  height: min-content;
+  font-size: medium;
+  margin-bottom: 0rem;
+}
+.Single_Project_Card_Body
+{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.Single_Project_Card_Information
+{
+  display: inline-block;
+  height: 100%;
+  border: solid white 0.1rem;
+  font-size: medium;
+  white-space: pre-line;
+  word-wrap: break-word;
+  justify-content: left;
+  vertical-align: 50%;
 }
 .Single_Project_Image
 {
-  height: 6rem;
+  height: 4rem;
+  display: inline-block;
+  flex-shrink: 0;
+  margin-right: 1rem;
+}
+.Single_Project_Card_Expand_Collapse_Button
+{
+  cursor: pointer;
 }
 #Footer
 {
