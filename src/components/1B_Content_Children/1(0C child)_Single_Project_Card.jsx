@@ -18,22 +18,21 @@ export const SingleProjectCard = (props) =>
     }
     return(
         expandedBool?
-        <div className="Single_Project_Card">
+        <div className="Single_Project_Card_Expanded">
             <h3 id="Single_Project_Header"> {project.project_name} </h3>
             <div className="Single_Project_Card_Body">
-                <img src={project.image_0} alt={project.image_1_alt} className="Single_Project_Image"/>
-                <div className="Single_Project_Card_Information">
+                <div className="Single_Project_Card_Information_Expanded">
                     <div>{project.long_description}</div>
                     <div onClick={(event) => {collapseCard(event)}} className="Single_Project_Card_Expand_Collapse_Button">Read Less</div>
                 </div>
             </div>
         </div>
         :
-        <div className="Single_Project_Card">
+        <div className="Single_Project_Card_Shortened">
             <h3 id="Single_Project_Header"> {project.project_name} </h3>
             <div className="Single_Project_Card_Body">
                 <img src={project.image_0} alt={project.image_1_alt} className="Single_Project_Image"/>
-                <div className="Single_Project_Card_Information">
+                <div className="Single_Project_Card_Information_Shortened">
                     <div>{project.short_description}</div>
                     <div onClick={(event) => {expandCard(event)}} className="Single_Project_Card_Expand_Collapse_Button">Read Less</div>
                 </div>
