@@ -29,7 +29,7 @@
   width: 40rem;
   margin: auto;
   margin-bottom: 1rem;
-  height: 110rem; /*adjusted for 400 words*/
+  height: 86.95rem; /*adjusted for 400 words and 2 images*/
 }
 #Single_Project_Header
 {
@@ -42,12 +42,20 @@
   font-size: medium;
   margin-bottom: 0rem;
 }
-.Single_Project_Card_Body
+.Single_Project_Card_Body_Shortened
 {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   height: 4rem;
+}
+.Single_Project_Card_Body_Expanded
+{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 4rem;
+  justify-content: center;
 }
 .Single_Project_Card_Information_Shortened
 {
@@ -61,7 +69,6 @@
   justify-content: left;
   vertical-align: 50%;
   width: 32rem;
-  max-height: 100%;
 }
 .Single_Project_Card_Information_Expanded
 {
@@ -84,11 +91,25 @@
 {
   max-height: 100%;
   max-width: 100%;
-  height: 15rem;
+  height: 16rem;
+  width: 28rem;
+  margin-left: 6rem;
 }
-.Single_Project_Card_Expand_Collapse_Button
+.Single_Project_Card_Expand_Button
 {
   cursor: pointer;
+  width: 100%;
+  background-color: #E6B31E;
+  font-weight: 700;
+}
+.Single_Project_Card_Collapse_Button
+{
+  cursor: pointer;
+  color: #222831;
+  font-size: medium;
+  background-color: #E6B31E;
+  width: 100%;
+  font-weight: 700;
 }
 #Footer
 {
