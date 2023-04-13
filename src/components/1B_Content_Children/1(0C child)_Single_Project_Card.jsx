@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { animated, useSpring } from "@react-spring/web";
 
 export const SingleProjectCard = (props) =>
 {
@@ -18,30 +19,40 @@ export const SingleProjectCard = (props) =>
         setExpandedBool(false);
     }
 
+    const fadeAnimation = useSpring({from: {opacity: 0}, to: {opacity: 1}})
+
     return(
         expandedBool?
-        <div className="Single_Project_Card_Expanded">
-            <h3 id="Single_Project_Header"> {project.project_name} </h3>
-            <div className="Single_Project_Card_Body_Expanded">
-                <div className="Single_Project_Card_Information_Expanded">
-                    <div>{longBeDesc}</div>
-                    <img src={project.image_1} alt="" className="Single_Project_Image"/>
-                    <div>{longFeDesc}</div>
-                    <img src={project.image_2} alt="" className="Single_Project_Image"/>
+        <div className="expanded">
+            <div>
+                <div className="Single_Project_Card_Expanded">
+                    <h3 id="Single_Project_Header"> {project.project_name} </h3>
+                    <div className="Single_Project_Card_Body_Expanded">
+                        <div className="Single_Project_Card_Information_Expanded">
+                            <div>{longBeDesc}</div>
+                            <img src={project.image_1} alt="" className="Single_Project_Image"/>
+                            <div>{longFeDesc}</div>
+                            <img src={project.image_2} alt="" className="Single_Project_Image"/>
+                        </div>
+                        <button onClick={(event) => {collapseCard(event)}} className="Single_Project_Card_Collapse_Button">Read Less</button>
+                    </div>
                 </div>
-                <button onClick={(event) => {collapseCard(event)}} className="Single_Project_Card_Collapse_Button">Read Less</button>
             </div>
         </div>
         :
-        <div className="Single_Project_Card_Shortened">
-            <h3 id="Single_Project_Header"> {project.project_name} </h3>
-            <div className="Single_Project_Card_Body_Shortened">
-                <img src={project.image_0} alt={project.image_1_alt} className="Single_Project_Image_Logo"/>
-                <div className="Single_Project_Card_Information_Shortened">
-                    <div>{project.short_description}</div>
+        <div>
+            <animated.div style={fadeAnimation}>
+                <div className="Single_Project_Card_Shortened">
+                    <h3 id="Single_Project_Header"> {project.project_name} </h3>
+                    <div className="Single_Project_Card_Body_Shortened">
+                        <img src={project.image_0} alt={project.image_1_alt} className="Single_Project_Image_Logo"/>
+                        <div className="Single_Project_Card_Information_Shortened">
+                            <div>{project.short_description}</div>
+                        </div>
+                    </div>
+                    <button onClick={(event) => {expandCard(event)}} className="Single_Project_Card_Expand_Button">Read More</button>
                 </div>
-            </div>
-            <button onClick={(event) => {expandCard(event)}} className="Single_Project_Card_Expand_Button">Read More</button>
+            </animated.div>
         </div>
     )
 }
